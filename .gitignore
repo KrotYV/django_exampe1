@@ -1,3 +1,6 @@
 *.log
 db.sqlite3
+.idea/
+.venv/
+staticfiles/
 
