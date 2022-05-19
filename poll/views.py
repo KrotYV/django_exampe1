@@ -1,8 +1,6 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 
-from poll.models import Question, Choice
-# from django.utils import timezone
+from poll.models import Question
 
 
 def index(request):
@@ -10,7 +8,7 @@ def index(request):
     n = Question.objects.count()
 
     for i in range(n):
-        q = Question.objects.get(id=i+1)
+        q = Question.objects.get(id=i + 1)
         resp += '<b>Quastion:</b> {1:%d-%m-%Y %H:%M} - {0}<br>'\
             .format(q, q.pub_date)
         # resp += f'<b>Quastion:</b> {q} --> {q.pub_date} - ' \
@@ -30,4 +28,3 @@ def index(request):
 
 def index_1(request):
     return HttpResponse('Test hello world 1')
-# Create your views here.

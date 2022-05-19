@@ -4,5 +4,5 @@ db.sqlite3
 .venv/
 staticfiles/
 __pycache__/
-.flake8
+
 
